@@ -1,0 +1,7 @@
+<suite thread-count = "1" verbose = "1" name = "API-Automation">
+    <test name = "API-Automation-Rest-Assured">-->
+        <classes>
+            <class name = "TestRunner"/>
+        </classes>
+    </test>
+</suite>
