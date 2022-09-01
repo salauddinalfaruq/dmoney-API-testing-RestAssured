@@ -15,7 +15,6 @@ import static io.restassured.RestAssured.given;
 
 
 public class User {
-
     Properties prop = new Properties();
     FileInputStream file;
     {
@@ -27,10 +26,8 @@ public class User {
     }
 
     public void doLoginWithValidCreds() throws ConfigurationException, IOException {
-
         prop.load(file);
         LoginModel loginModel = new LoginModel("salman@grr.la", "1234");
-
         RestAssured.baseURI = prop.getProperty("baseUrl");
         Response res =
                 given()
@@ -49,10 +46,8 @@ public class User {
     }
 
     public void doLoginWrongEmail() throws IOException {
-
         prop.load(file);
         LoginModel loginModel = new LoginModel("salman@grr", "1234");
-
         RestAssured.baseURI = prop.getProperty("baseUrl");
         Response res =
                 given()
@@ -67,10 +62,8 @@ public class User {
     }
 
     public void doLoginWrongPassword() throws IOException {
-
         prop.load(file);
         LoginModel loginModel = new LoginModel("salman@grr.la", "123768");
-
         RestAssured.baseURI = prop.getProperty("baseUrl");
         Response res =
                 given()
@@ -86,7 +79,6 @@ public class User {
 
     public void getUserList() throws IOException {
         prop.load(file);
-
         RestAssured.baseURI = prop.getProperty("baseUrl");
         Response res =
                 given()
@@ -101,10 +93,8 @@ public class User {
     }
 
     public void getUserLIdtWithWrongToken() throws IOException {
-
         prop.load(file);
         String token = "abc123";
-
         RestAssured.baseURI = prop.getProperty("baseUrl");
         Response res =
                 given()
@@ -120,9 +110,7 @@ public class User {
     }
 
     public void getUserLIdtWithEmptyAuth() throws IOException {
-
         prop.load(file);
-
         RestAssured.baseURI = prop.getProperty("baseUrl");
         Response res =
                 given()
@@ -173,7 +161,6 @@ public class User {
 
     public void alreadyExistUser() throws IOException {
         prop.load(file);
-
         RestAssured.baseURI = prop.getProperty("baseUrl");
         Response res =
                 given()
@@ -199,7 +186,6 @@ public class User {
 
     public void searchUserById() throws IOException {
         prop.load(file);
-
         RestAssured.baseURI = prop.getProperty("baseUrl");
         Response res =
                 given()
@@ -217,7 +203,6 @@ public class User {
 
     public void updateUser() throws IOException {
         prop.load(file);
-
         RestAssured.baseURI = prop.getProperty("baseUrl");
         Response res =
                 given()
@@ -243,7 +228,6 @@ public class User {
 
     public void updateUserPhoneNumber() throws IOException {
         prop.load(file);
-
         RestAssured.baseURI = prop.getProperty("baseUrl");
         Response res =
                 given()
@@ -264,7 +248,6 @@ public class User {
 
     public void deleteUser() throws IOException {
         prop.load(file);
-
         RestAssured.baseURI = prop.getProperty("baseUrl");
         Response res =
                 given()
