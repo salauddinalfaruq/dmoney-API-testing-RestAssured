@@ -24,17 +24,15 @@
 #### Steps to run
 - Clone the repo
 - Give command in root directory
-```bash
-  gradle clean test 
-```
+
+  `gradle clean test`
 
 #### Report
 - After run the project give the following command for generate Allure Report
 
-```bash
-  allure generate allure-results --clean -o allure-report
-```
-    allure serve allure-results  
+  `allure generate allure-results --clean -o allure-report`
+  
+  `allure serve allure-results`  
 
 Report Overview
   ![Overview](https://user-images.githubusercontent.com/108132871/187906494-967d6f8b-a121-4bf5-967c-45d797fcac66.PNG)
