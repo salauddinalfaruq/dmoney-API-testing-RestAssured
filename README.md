@@ -1,4 +1,5 @@
 
+
 ## API_Testing_REST-Assured
 
 ### Description
@@ -22,17 +23,21 @@
 
 #### Steps to run
 - Clone the repo
-- Give gradle clean test command in root directory
+- Give command in root directory
+```bash
+  gradle clean test 
+```
 
-  
-
-### Report
+#### Report
 - After run the project give the following command for generate Allure Report
 
-    allure generate allure-results --clean -o allure-report
+```bash
+  allure generate allure-results --clean -o allure-report
+```
     allure serve allure-results  
 
-- Report Overview
+Report Overview
   ![Overview](https://user-images.githubusercontent.com/108132871/187906494-967d6f8b-a121-4bf5-967c-45d797fcac66.PNG)
-- Suites
+  
+Suites
   ![suite](https://user-images.githubusercontent.com/108132871/187906527-ec19a3f4-70b3-4c63-8217-9fca69549c7d.PNG)
